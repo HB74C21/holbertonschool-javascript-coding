@@ -11,7 +11,8 @@ request.get(apiUrl, (error, response, body) => {
 
   const filmsData = JSON.parse(body);
   const filmsWithWedgeAntilles = filmsData.results.filter(film =>
-    film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}/`)
+    film.characters.includes(
+        `https://swapi-api.hbtn.io/api/people/${characterId}/`)
   );
 
   console.log(filmsWithWedgeAntilles.length);
